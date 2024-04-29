@@ -573,6 +573,7 @@ section {
   z-index: 1;
 }
 
+
 .portfolio .portfolio-wrap::before {
   content: "";
   background: rgba(255, 255, 255, 0.5);
@@ -975,7 +976,8 @@ section {
   margin: 0 10px -6px 0;
   border: 3px solid #18d26e;
   border-top-color: #eee;
-  animation: animate-loading 1s linear infinite;
+  -webkit-animation: animate-loading 1s linear infinite;
+          animation: animate-loading 1s linear infinite;
 }
 
 .contact .php-email-form .form-group {
@@ -1012,6 +1014,16 @@ section {
 
 .contact .php-email-form button[type=submit]:hover {
   background: #37b3ed;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes animate-loading {
